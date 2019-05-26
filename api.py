@@ -17,19 +17,19 @@ class Station(Resource):
 
     def post(self):
         obj = request.form
-        station.addFuel(Fuel(obj["name"], int(obj["tank"])))
+        station.add_fuel_type(Fuel(obj["name"], int(obj["tank"])))
         s.save(station)
         return s.load_json(), 201
 
     def put(self):
         obj = request.form
-        station.spentFuel(obj["name"], int(obj["tank"]))
+        station.spend_fuel(obj["name"], int(obj["tank"]))
         s.save(station)
         return s.load_json(), 200
 
     def delete(self):
         obj = request.form["name"]
-        station.deleteFuel(obj)
+        station.delete_fuel_type(obj)
         s.save(station)
         return s.load_json(), 200
 
