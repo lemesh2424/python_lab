@@ -3,6 +3,10 @@
         {
             "name": "95",
             "tank": 20
+        },
+        {
+            "name": "98",
+            "tank": 2000
         }
     ],
     "name": "AYAYAY"

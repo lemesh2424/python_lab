@@ -1,6 +1,5 @@
 from fuel import Fuel
 
-
 class Station:
     def __init__(self, name):
         self.__name__ = name
@@ -24,6 +23,8 @@ class Station:
         >>> fuel2 == st.__fuelList__.pop() and fuel == st.__fuelList__.pop()
         True
         """
+        if fuel.__tank__ < 0:
+            raise Exception("Tank volume is negative")
         exist = False
         for f in self.__fuelList__:
             if f.__name__ == fuel.__name__:

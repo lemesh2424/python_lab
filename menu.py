@@ -71,7 +71,7 @@ class Menu:
             return
 
         if type(tank) == int:
-            self.__station__.add_fuel(Fuel(name, tank))
+            self.__station__.add_fuel_type(Fuel(name, tank))
             print("Successfully added!")
         else:
             print("Tank must a number!")
@@ -104,7 +104,7 @@ class Menu:
         print("\n\nInput fuel name that you want to delete: ")
         name = input()
         if self.__station__.is_fuel(name):
-            self.__station__.delete_fuel(name)
+            self.__station__.delete_fuel_type(name)
         else:
             print("Fuel with name " + name + " not found")
 
