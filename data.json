@@ -2,16 +2,8 @@
     "fuel": [
         {
             "name": "95",
-            "tank": 25600
-        },
-        {
-            "name": "100",
-            "tank": 36000
-        },
-        {
-            "name": "asdf",
-            "tank": 45
+            "tank": 20
         }
     ],
-    "name": "Neftek"
+    "name": "AYAYAY"
 }
