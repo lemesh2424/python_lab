@@ -20,6 +20,12 @@ class Station:
             if f.__name__ == name:
                 f.__tank__ -= volume
 
+    def isFuel(self, name):
+        for f in self.__fuelList__:
+            if f.__name__ == name:
+                return True
+        return False
+
     def deleteFuel(self, name):
         self.__fuelList__ = list(filter(lambda x: x.__name__ != name, self.__fuelList__))
     
@@ -32,3 +38,7 @@ class Station:
             """.format(f.__name__, f.__tank__)
             output_list.append(description)
         return output_list
+
+    def isEmpty(self):
+        return len(self.__fuelList__) == 0
+
